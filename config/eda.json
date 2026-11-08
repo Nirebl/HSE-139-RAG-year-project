@@ -1,0 +1,16 @@
+{
+  "seed": 42,
+  "limits": {"qa": 1000, "documentation": 100, "runbook": 60, "incident": 12},
+  "timeout_seconds": 45,
+  "max_download_bytes": 60000000,
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "batch_size": 32,
+  "device": "cpu",
+  "chunk_tokens": 220,
+  "overlap_tokens": 32,
+  "embedding_documents_per_source": 60,
+  "pair_samples": 500,
+  "near_duplicate_cosine": 0.95,
+  "coverage_queries": 10,
+  "augmentations": 20
+}

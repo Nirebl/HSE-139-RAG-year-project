@@ -218,3 +218,21 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local research snapshots, restricted publisher texts and model weights
+data/raw/
+data/parsed/
+data/cleaned/
+data/processed/
+data/cache/
+models/
+reports/coverage_review.csv
+reports/augmentations.csv
+reports/exclusions.json
+# Contains source excerpts and synthetic derivatives: inspect rights before sharing.
+
+!EDA.ipynb
+!notebooks/*.ipynb
+
+# Historical generated notebooks are not the submission
+notebooks/legacy_pipeline_report.ipynb

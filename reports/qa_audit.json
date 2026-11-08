@@ -1,0 +1,233 @@
+{
+  "rows": 910,
+  "splits": {
+    "train": 910
+  },
+  "id_prefixes": {
+    "DEV": 310,
+    "TRAIN": 600
+  },
+  "answerability": {
+    "False": 610,
+    "True": 300
+  },
+  "empty_answers": 2,
+  "empty_questions": 0,
+  "placeholder_answers": 302,
+  "answerable_placeholder_answers": 2,
+  "contexts_histogram": {
+    "1": 610,
+    "0": 300
+  },
+  "duplicate_question_groups": [
+    [
+      "DEV_Q014",
+      "TRAIN_Q299"
+    ],
+    [
+      "DEV_Q029",
+      "TRAIN_Q489"
+    ],
+    [
+      "DEV_Q038",
+      "TRAIN_Q067"
+    ],
+    [
+      "DEV_Q082",
+      "TRAIN_Q238"
+    ],
+    [
+      "DEV_Q094",
+      "TRAIN_Q285"
+    ],
+    [
+      "DEV_Q129",
+      "TRAIN_Q206"
+    ],
+    [
+      "DEV_Q155",
+      "TRAIN_Q056"
+    ],
+    [
+      "DEV_Q156",
+      "TRAIN_Q047"
+    ],
+    [
+      "DEV_Q160",
+      "TRAIN_Q107"
+    ],
+    [
+      "DEV_Q164",
+      "DEV_Q215"
+    ],
+    [
+      "DEV_Q165",
+      "TRAIN_Q160"
+    ],
+    [
+      "DEV_Q179",
+      "TRAIN_Q076"
+    ],
+    [
+      "DEV_Q180",
+      "TRAIN_Q559"
+    ],
+    [
+      "DEV_Q189",
+      "TRAIN_Q210"
+    ],
+    [
+      "DEV_Q195",
+      "TRAIN_Q156"
+    ],
+    [
+      "DEV_Q225",
+      "TRAIN_Q042"
+    ],
+    [
+      "DEV_Q228",
+      "TRAIN_Q333"
+    ],
+    [
+      "DEV_Q240",
+      "TRAIN_Q286"
+    ],
+    [
+      "DEV_Q276",
+      "TRAIN_Q248"
+    ],
+    [
+      "DEV_Q290",
+      "TRAIN_Q189"
+    ],
+    [
+      "DEV_Q298",
+      "TRAIN_Q138"
+    ],
+    [
+      "DEV_Q300",
+      "TRAIN_Q228"
+    ],
+    [
+      "DEV_Q303",
+      "TRAIN_Q507"
+    ],
+    [
+      "TRAIN_Q022",
+      "TRAIN_Q340"
+    ],
+    [
+      "TRAIN_Q024",
+      "TRAIN_Q505"
+    ],
+    [
+      "TRAIN_Q358",
+      "TRAIN_Q398"
+    ],
+    [
+      "TRAIN_Q373",
+      "TRAIN_Q516"
+    ],
+    [
+      "TRAIN_Q402",
+      "TRAIN_Q551"
+    ],
+    [
+      "TRAIN_Q455",
+      "TRAIN_Q593"
+    ]
+  ],
+  "cross_prefix_duplicate_questions": [
+    [
+      "DEV_Q014",
+      "TRAIN_Q299"
+    ],
+    [
+      "DEV_Q029",
+      "TRAIN_Q489"
+    ],
+    [
+      "DEV_Q038",
+      "TRAIN_Q067"
+    ],
+    [
+      "DEV_Q082",
+      "TRAIN_Q238"
+    ],
+    [
+      "DEV_Q094",
+      "TRAIN_Q285"
+    ],
+    [
+      "DEV_Q129",
+      "TRAIN_Q206"
+    ],
+    [
+      "DEV_Q155",
+      "TRAIN_Q056"
+    ],
+    [
+      "DEV_Q156",
+      "TRAIN_Q047"
+    ],
+    [
+      "DEV_Q160",
+      "TRAIN_Q107"
+    ],
+    [
+      "DEV_Q165",
+      "TRAIN_Q160"
+    ],
+    [
+      "DEV_Q179",
+      "TRAIN_Q076"
+    ],
+    [
+      "DEV_Q180",
+      "TRAIN_Q559"
+    ],
+    [
+      "DEV_Q189",
+      "TRAIN_Q210"
+    ],
+    [
+      "DEV_Q195",
+      "TRAIN_Q156"
+    ],
+    [
+      "DEV_Q225",
+      "TRAIN_Q042"
+    ],
+    [
+      "DEV_Q228",
+      "TRAIN_Q333"
+    ],
+    [
+      "DEV_Q240",
+      "TRAIN_Q286"
+    ],
+    [
+      "DEV_Q276",
+      "TRAIN_Q248"
+    ],
+    [
+      "DEV_Q290",
+      "TRAIN_Q189"
+    ],
+    [
+      "DEV_Q298",
+      "TRAIN_Q138"
+    ],
+    [
+      "DEV_Q300",
+      "TRAIN_Q228"
+    ],
+    [
+      "DEV_Q303",
+      "TRAIN_Q507"
+    ]
+  ],
+  "context_shared_across_prefixes": 40,
+  "context_not_answer_span": 198,
+  "split_warning": "Published train split contains TRAIN/DEV ID prefixes; prefixes are retained as provenance, not invented dataset splits. No test file published in this NVIDIA snapshot."
+}
