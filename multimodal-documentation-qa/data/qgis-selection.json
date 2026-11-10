@@ -1,0 +1,17 @@
+{
+  "site": "gis",
+  "tags": "qgis;raster",
+  "documentation": "https://docs.qgis.org/3.44/en/",
+  "seen_accepted_questions": 272,
+  "eligible": 46,
+  "selected": 46,
+  "seed": 42,
+  "popular": 23,
+  "random_remaining": 23,
+  "first_utc": "2021-01-01",
+  "last_utc": "2025-12-31",
+  "snapshot": "2026-11-10T14:11:15.017697+00:00",
+  "counts": {
+    "matching_page_in_answer": 46
+  }
+}
