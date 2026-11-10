@@ -1,0 +1,15 @@
+# Смысловой разбор кандидатов агентом
+
+Это предварительный анализ агента по сохранённым фрагментам, **не human evaluation**. Поля human_label/reviewer/reviewed_at в coverage_review.csv остаются пустыми. Ниже объясняется, почему ранги/cosine нельзя интерпретировать как релевантность.
+
+| Запрос | Наблюдение по top-1 и фрагменту | Следствие |
+|---|---|---|
+| c01: PostgreSQL replication lag, connection failures | Runbook содержит `pg_stat_wal_receiver`, различие `waiting`/`streaming`, проверку Leader; GitLab incident описывает `max_wal_senders`, `max_connections` и неработающую репликацию. Kubernetes-кандидат обсуждает ReplicationController и canary pods. | Есть кандидат на дополнение «инструкция + история», но слово replication приводит и к другому продукту. Product-aware фильтр и human review нужны до claims. |
+| c02: pods restart after deployment | Kubernetes-фрагмент про CrashLoopBackOff связан с `kubeadm init` и network add-on; GitLab top-1 про PodsUnschedulable, а не про рестарты. Slack-фрагмент обсуждает packet loss и provisioning. | Даже cosine около 0.67 у обоих первых кандидатов не подтверждает одинаковый failure mode. Уточнять, pod Pending или CrashLoopBackOff, проверять контекст создания кластера. |
+| c03: DNS SERVFAIL | Kubernetes даёт `nslookup kubernetes.default` и проверку DNS. Cloudflare incident прямо упоминает SERVFAIL у 1.1.1.1. GitLab top-1 Camoproxy описывает SSL/TLS proxy и health checks, без прямого доказательства диагностики SERVFAIL в выбранном окне. | Общий симптом объединяет документацию и отчёт, но внешний resolver и cluster DNS — разные окружения. Нельзя переносить Cloudflare root cause в Kubernetes как факт. |
+| c04: Redis memory/latency | Kubernetes-кандидат объясняет монтирование redis.conf из ConfigMap, GitLab-фрагмент — рост shared-state memory от worker payloads; Slack говорит о cascading failures и warm cache. | Совпадение Redis/configuration не равно инструкции диагностики OOM. Нужны ограничения по компоненту и оценка полноты диагностических шагов. |
+| c05: удалён primary PostgreSQL | Runbook про восстановление потерянных WAL на временной машине задаёт условия и роль DBRE. GitLab postmortem описывает ошибочное удаление primary и провал восстановления backups; Kubernetes top-1 — удаление ReplicationController. | Возможное дополнение контекстов «что пошло не так» и «при каких условиях восстанавливать»; само наличие команды не разрешает её выполнение и не доказывает применимость ко всем recovery-сценариям. |
+
+Отдельный domain shift: IBM TRAIN_Q016 говорит «Too many open files» в DASH systemOut; TRAIN_Q032 содержит `com.ibm.icm.jcr.access.AccessDeniedException`. Такие точные product/log identifiers надо сохранять и искать лексически. Их нельзя оценивать как запросы к GitLab runbooks лишь по наличию общих слов error/access.
+
+Гипотеза дополнения источников остаётся открытой до человека. Для отсутствующего полезного top-3 формулировка: «полезное свидетельство не установлено среди проверенных кандидатов», а не «в корпусе информации нет».

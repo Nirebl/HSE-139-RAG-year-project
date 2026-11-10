@@ -1,0 +1,17 @@
+{
+  "site": "stackoverflow",
+  "tags": "matplotlib",
+  "documentation": "https://matplotlib.org/3.10.7/",
+  "seen_accepted_questions": 9806,
+  "eligible": 1518,
+  "selected": 200,
+  "seed": 42,
+  "popular": 100,
+  "random_remaining": 100,
+  "first_utc": "2021-01-01",
+  "last_utc": "2025-12-31",
+  "snapshot": "2026-11-10T14:10:21.058034+00:00",
+  "counts": {
+    "matching_page_in_answer": 1537
+  }
+}
